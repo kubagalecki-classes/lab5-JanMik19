@@ -18,7 +18,7 @@ vector< char > foo(list< Human >& people)
  	    obj.emplace_back('n');
   }
   
-  for(auto rh = obj.crbegin(); rh != obj.crend(); rh++)
+  for(auto rh = obj.crbegin(); rh != obj.crend(); ++rh)
     obj.emplace_front(*rh);
   
   return obj; // zwrot wektora objektow typu 'char'

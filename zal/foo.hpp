@@ -19,7 +19,7 @@ vector< char > foo(list< Human >& people)
   }
   
   for(auto rh = obj.crbegin(); rh != obj.crend(); ++rh)
-    obj.emplace_front(*rh);
+    obj.emplace_back(*rh);
   
   return obj; // zwrot wektora objektow typu 'char'
 }

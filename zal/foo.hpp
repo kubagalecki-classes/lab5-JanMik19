@@ -7,7 +7,7 @@ using namespace std;
 
 vector< char > foo(list< Human >& people)
 {
-  vector< char > obj; // wektor objektow typu character(char)
+  vector< char > obj, robj; // wektor objektow typu character(char), robj druga lista - odwrotna
 
   for(Human& h : people)
   {
@@ -15,11 +15,11 @@ vector< char > foo(list< Human >& people)
     if (h.isMonster() == false)
       obj.emplace_back('y');
     else
- 	    obj.emplace_back('n');
+ 	  obj.emplace_back('n');
   }
   
   for(auto rh = obj.crbegin(); rh != obj.crend(); ++rh)
-    obj.emplace_back(*rh);
+    robj.emplace_back(*rh);
   
-  return obj; // zwrot wektora objektow typu 'char'
+  return robj; // zwrot wektora objektow typu 'char'
 }
